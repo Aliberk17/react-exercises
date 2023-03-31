@@ -1,9 +1,11 @@
 import "./App.css";
 
-function App() {
-  const hello = <h1>"Hello, World!"</h1>;
+const renderName = (name) => {
+  return <h1>Hello, {name}</h1>;
+};
 
-  return <div className="App">{hello}</div>;
+function App() {
+  return <div className="App">{renderName("Ali")}</div>;
 }
 
 export default App;
