@@ -1,11 +1,11 @@
 import "./App.css";
 
-const renderName = (name) => {
-  return <h1>Hello, {name}</h1>;
+const renderSum = (a, b) => {
+  return <h2>{a + b}</h2>;
 };
 
 function App() {
-  return <div className="App">{renderName("Ali")}</div>;
+  return <div className="App">{renderSum(3, 5)}</div>;
 }
 
 export default App;
