@@ -6,7 +6,11 @@ export default class Welcome extends Component {
     return (
       <div>
         <p>Welcome {this.props.name || "Default name"}!</p>
-        {this.props.age ? <Age age={this.props.age} /> : <div></div>}
+        {this.props.age > 18 && this.props.age < 65 ? (
+          <Age age={this.props.age} />
+        ) : (
+          <div></div>
+        )}
       </div>
     );
   }
