@@ -6,8 +6,7 @@ export default class Counter extends Component {
     count: this.props.initialValue,
   };
 
-  constructor(props) {
-    super(props);
+  componentDidMount() {
     setInterval(() => {
       this.setState({ count: this.state.count + this.props.incrementAmount });
     }, this.props.incrementInterval);
