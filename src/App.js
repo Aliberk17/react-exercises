@@ -9,7 +9,7 @@ export default class App extends Component {
       <div>
         <Hello />
         <Welcome name="John" age="26" />
-        <Counter count = {0}/>
+        <Counter initalValue={0} incrementInterval={2000} incrementAmount={7} />
       </div>
     );
   }
