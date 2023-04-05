@@ -30,6 +30,16 @@ export default class Login extends Component {
         <br />
         <label>remember: </label>
         <input name="remember" type="checkbox" onChange={this.handleChanged} />
+        <br />
+        <button
+          disabled={this.state.username === "" && this.state.password === ""}
+          onClick={(event) => {
+            event.preventDefault();
+            this.props.onLogin(this.state);
+          }}
+        >
+          login
+        </button>
       </form>
     );
   }

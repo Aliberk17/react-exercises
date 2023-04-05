@@ -7,15 +7,21 @@ import Login from "./Login";
 import Welcome from "./Welcome";
 
 export default class App extends Component {
+  onLogin = (info) => {};
+
   render() {
     return (
       <div>
         <Hello />
         <Welcome name="John" age="26" />
-        <Counter initialValue={0} incrementInterval={2000} incrementAmount={7} />
-        <ClickTracker/>
-        <InteractiveWelcome/>
-        <Login/>
+        <Counter
+          initialValue={0}
+          incrementInterval={2000}
+          incrementAmount={7}
+        />
+        <ClickTracker />
+        <InteractiveWelcome />
+        <Login onLogin={this.onLogin} />
       </div>
     );
   }
