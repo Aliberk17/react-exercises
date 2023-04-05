@@ -19,17 +19,39 @@ export default class Login extends Component {
     }
   };
 
+  resetInputs = (event) => {
+    event.preventDefault();
+    this.setState({
+      username: "",
+      password: "",
+      remember: false,
+    });
+  };
+
   render() {
     return (
       <form>
         <label>username: </label>
-        <input name="username" onChange={this.handleChanged} />
+        <input
+          name="username"
+          value={this.state.username}
+          onChange={this.handleChanged}
+        />
         <br />
         <label>password: </label>
-        <input name="password" onChange={this.handleChanged} />
+        <input
+          name="password"
+          value={this.state.password}
+          onChange={this.handleChanged}
+        />
         <br />
         <label>remember: </label>
-        <input name="remember" type="checkbox" onChange={this.handleChanged} />
+        <input
+          name="remember"
+          type="checkbox"
+          checked={this.state.remember}
+          onChange={this.handleChanged}
+        />
         <br />
         <button
           disabled={this.state.username === "" && this.state.password === ""}
@@ -40,6 +62,7 @@ export default class Login extends Component {
         >
           login
         </button>
+        <button onClick={this.resetInputs}>reset</button>
       </form>
     );
   }
