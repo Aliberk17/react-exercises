@@ -5,6 +5,10 @@ export default class UncontrolledLogin extends Component {
   password = React.createRef();
   remember = React.createRef();
 
+  componentDidMount() {
+    this.username.current.focus();
+  }
+
   render() {
     return (
       <form>
