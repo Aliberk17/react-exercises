@@ -59,6 +59,11 @@ export default class Login extends Component {
             event.preventDefault();
             this.props.onLogin(this.state);
           }}
+          className={
+            this.state.password.length < 8
+              ? "loginInputInactive"
+              : "loginInputActive"
+          }
         >
           login
         </button>
