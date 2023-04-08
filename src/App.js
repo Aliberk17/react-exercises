@@ -12,6 +12,21 @@ import Welcome from "./Welcome";
 export default class App extends Component {
   onLogin = (info) => {};
 
+  renderTodoList = (items, handleListItemRemoveClick) => {
+    return (
+      <ul>
+        {items.map((item) => (
+          <div key={item}>
+            <li>{item}</li>
+            <button onClick={() => handleListItemRemoveClick(item)}>
+              remove
+            </button>
+          </div>
+        ))}
+      </ul>
+    );
+  };
+
   render() {
     return (
       <div>
@@ -26,7 +41,7 @@ export default class App extends Component {
         <InteractiveWelcome />
         <Login onLogin={this.onLogin} />
         <UncontrolledLogin onLogin={this.onLogin} />
-        <TodoList />
+        <TodoList render={this.renderTodoList} />
         <Container title="Ali" />
       </div>
     );

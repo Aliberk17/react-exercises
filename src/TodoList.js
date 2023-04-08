@@ -39,16 +39,7 @@ export default class TodoList extends Component {
   render() {
     return (
       <div>
-        <ul>
-          {this.state.items.map((item) => (
-            <div key={item}>
-              <li>{item}</li>
-              <button onClick={() => this.handleListItemRemoveClick(item)}>
-                remove
-              </button>
-            </div>
-          ))}
-        </ul>
+        {this.props.render(this.state.items, this.handleListItemRemoveClick)}
         <input value={this.state.inputText} onChange={this.handleChange} />
         <button onClick={this.handleClick}>Add to List</button>
         <button onClick={this.handleResetClick}>Reset</button>
