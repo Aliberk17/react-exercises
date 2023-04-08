@@ -27,12 +27,26 @@ export default class TodoList extends Component {
     });
   };
 
+  handleListItemRemoveClick = (item) => {
+    let newItems = this.state.items;
+    let index = newItems.indexOf(item);
+    newItems.splice(index, 1);
+    this.setState({
+      items: newItems,
+    });
+  };
+
   render() {
     return (
       <div>
         <ul>
           {this.state.items.map((item) => (
-            <li key={item}>{item}</li>
+            <div key={item}>
+              <li>{item}</li>
+              <button onClick={() => this.handleListItemRemoveClick(item)}>
+                remove
+              </button>
+            </div>
           ))}
         </ul>
         <input value={this.state.inputText} onChange={this.handleChange} />
