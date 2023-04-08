@@ -5,7 +5,7 @@ export default class DisplayLanguage extends Component {
   render() {
     return (
       <LanguageContext.Consumer>
-        {(value) => <div>{value}</div>}
+        {(value) => <h1>{value}</h1>}
       </LanguageContext.Consumer>
     );
   }
