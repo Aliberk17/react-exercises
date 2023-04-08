@@ -9,6 +9,7 @@ import Login from "./Login";
 import TodoList from "./TodoList";
 import UncontrolledLogin from "./UncontrolledLogin ";
 import Welcome from "./Welcome";
+import Sum from "./Sum";
 
 export default class App extends Component {
   onLogin = (info) => {};
@@ -44,7 +45,8 @@ export default class App extends Component {
         <UncontrolledLogin onLogin={this.onLogin} />
         <TodoList render={this.renderTodoList} />
         <Container title="Ali" />
-        <DisplayLanguageWrapper/>
+        <DisplayLanguageWrapper />
+        <Sum numbers={[1, 2, 3, 4]} />
       </div>
     );
   }
