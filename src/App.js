@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ClickTracker from "./ClickTracker";
 import Container from "./Container";
 import Counter from "./Counter";
+import DisplayLanguageWrapper from "./DisplayLanguageWrapper";
 import Hello from "./Hello";
 import InteractiveWelcome from "./InteractiveWelcome ";
 import Login from "./Login";
@@ -43,6 +44,7 @@ export default class App extends Component {
         <UncontrolledLogin onLogin={this.onLogin} />
         <TodoList render={this.renderTodoList} />
         <Container title="Ali" />
+        <DisplayLanguageWrapper/>
       </div>
     );
   }
