@@ -26,8 +26,8 @@ export default class App extends Component {
         <InteractiveWelcome />
         <Login onLogin={this.onLogin} />
         <UncontrolledLogin onLogin={this.onLogin} />
-        <TodoList/>
-        <Container/>
+        <TodoList />
+        <Container title="Ali" />
       </div>
     );
   }
