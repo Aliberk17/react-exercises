@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ClickTracker from "./ClickTracker";
+import Container from "./Container";
 import Counter from "./Counter";
 import Hello from "./Hello";
 import InteractiveWelcome from "./InteractiveWelcome ";
@@ -26,6 +27,7 @@ export default class App extends Component {
         <Login onLogin={this.onLogin} />
         <UncontrolledLogin onLogin={this.onLogin} />
         <TodoList/>
+        <Container/>
       </div>
     );
   }

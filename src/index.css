@@ -10,3 +10,8 @@
 .loginInputInactive {
   background-color: red;
 }
+
+.customContainer {
+  background-color: white;
+  border: solid 1px red;
+}
