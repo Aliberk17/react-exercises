@@ -4,7 +4,7 @@ import Age from "./Age";
 export default class Welcome extends Component {
   render() {
     return (
-      <div>
+      <div className="welcome">
         <p>Welcome {this.props.name || "Default name"}!</p>
         {this.props.age > 18 ? (
           <Age age={this.props.age} />
