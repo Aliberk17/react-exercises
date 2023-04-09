@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ClickCounter from "./ClickCounter ";
+//import ClickCounter from "./ClickCounter ";
 
 export default class Counter extends Component {
   state = {
@@ -13,11 +13,11 @@ export default class Counter extends Component {
   };
 
   render() {
-    return (
-      <ClickCounter
-        count={this.state.count}
-        incrementCounter={this.incrementCounter}
-      />
+    return (<div></div>
+      // <ClickCounter
+      //   count={this.state.count}
+      //   incrementCounter={this.incrementCounter}
+      // />
     );
   }
 }

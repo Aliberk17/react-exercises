@@ -13,9 +13,9 @@ import Sum from "./Sum";
 import ClickCounter from "./ClickCounter ";
 
 export default class App extends Component {
-  onLogin = (info) => {
-    console.log(info);
-  };
+  onLogin = (info) => {};
+
+  onCounterChange = (count) => {};
 
   renderTodoList = (items, handleListItemRemoveClick) => {
     return (
@@ -50,7 +50,7 @@ export default class App extends Component {
         <Container title="Ali" />
         <DisplayLanguageWrapper />
         <Sum numbers={[1, 2, 3, 4]} />
-        <ClickCounter/>
+        <ClickCounter onCounterChange={this.onCounterChange} />
       </div>
     );
   }
