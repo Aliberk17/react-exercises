@@ -37,11 +37,7 @@ export default class App extends Component {
       <div>
         <Hello />
         <Welcome name="John" age="26" />
-        <Counter
-          initialValue={0}
-          incrementInterval={2000}
-          incrementAmount={7}
-        />
+        <Counter />
         <ClickTracker />
         <InteractiveWelcome />
         <Login onLogin={this.onLogin} />

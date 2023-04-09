@@ -1,23 +1,17 @@
-import React, { Component } from "react";
-//import ClickCounter from "./ClickCounter ";
+import React, { useState, useEffect } from "react";
 
-export default class Counter extends Component {
-  state = {
-    count: this.props.initialValue,
-  };
+function Counter() {
+  const [count, setCount] = useState(0);
 
-  incrementCounter = () => {
-    this.setState({
-      count: this.state.count + this.props.incrementAmount,
-    });
-  };
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCount((count) => count + 1);
+    }, 1000);
 
-  render() {
-    return (<div></div>
-      // <ClickCounter
-      //   count={this.state.count}
-      //   incrementCounter={this.incrementCounter}
-      // />
-    );
-  }
+    return () => clearInterval(timer);
+  }, []);
+
+  return <h1>{count}</h1>;
 }
+
+export default Counter;

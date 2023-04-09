@@ -25,18 +25,10 @@ function Login(props) {
   return (
     <form>
       <label>username: </label>
-      <input
-        name="username"
-        value={username}
-        onChange={handleChanged}
-      />
+      <input name="username" value={username} onChange={handleChanged} />
       <br />
       <label>password: </label>
-      <input
-        name="password"
-        value={password}
-        onChange={handleChanged}
-      />
+      <input name="password" value={password} onChange={handleChanged} />
       <br />
       <label>remember: </label>
       <input
@@ -50,12 +42,10 @@ function Login(props) {
         disabled={username === "" && password === ""}
         onClick={(event) => {
           event.preventDefault();
-          props.onLogin({username, password, remember});
+          props.onLogin({ username, password, remember });
         }}
         className={
-          password.length < 8
-            ? "loginInputInactive"
-            : "loginInputActive"
+          password.length < 8 ? "loginInputInactive" : "loginInputActive"
         }
       >
         login
