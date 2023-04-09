@@ -10,6 +10,7 @@ import TodoList from "./TodoList";
 import UncontrolledLogin from "./UncontrolledLogin ";
 import Welcome from "./Welcome";
 import Sum from "./Sum";
+import ClickCounter from "./ClickCounter ";
 
 export default class App extends Component {
   onLogin = (info) => {};
@@ -47,6 +48,7 @@ export default class App extends Component {
         <Container title="Ali" />
         <DisplayLanguageWrapper />
         <Sum numbers={[1, 2, 3, 4]} />
+        <ClickCounter/>
       </div>
     );
   }
