@@ -13,7 +13,9 @@ import Sum from "./Sum";
 import ClickCounter from "./ClickCounter ";
 
 export default class App extends Component {
-  onLogin = (info) => {};
+  onLogin = (info) => {
+    console.log(info);
+  };
 
   renderTodoList = (items, handleListItemRemoveClick) => {
     return (
