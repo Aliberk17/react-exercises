@@ -1,15 +1,15 @@
 import { useState } from "react";
+import useForm from "./useForm";
 
 function Login(props) {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, updateUsername, password, updatePassword] = useForm();
   const [remember, setRemember] = useState(false);
 
   const handleChanged = (event) => {
     if (event.target.name === "username") {
-      setUsername(event.target.value);
+      updateUsername(event.target.value);
     } else if (event.target.name === "password") {
-      setPassword(event.target.value);
+      updatePassword(event.target.value);
     } else if (event.target.name === "remember") {
       setRemember(!remember);
     }
@@ -17,8 +17,8 @@ function Login(props) {
 
   const resetInputs = (event) => {
     event.preventDefault();
-    setUsername("");
-    setPassword("");
+    updateUsername("");
+    updatePassword("");
     setRemember(false);
   };
 
