@@ -11,6 +11,7 @@ import UncontrolledLogin from "./UncontrolledLogin ";
 import Welcome from "./Welcome";
 import Sum from "./Sum";
 import ClickCounter from "./ClickCounter ";
+import GithubUser from "./GithubUser";
 
 export default class App extends Component {
   onLogin = (info) => {};
@@ -47,6 +48,7 @@ export default class App extends Component {
         <DisplayLanguageWrapper />
         <Sum numbers={[1, 2, 3, 4]} />
         <ClickCounter onCounterChange={this.onCounterChange} />
+        <GithubUser username={"Aliberk17"} />
       </div>
     );
   }
