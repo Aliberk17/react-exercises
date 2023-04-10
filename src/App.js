@@ -12,6 +12,7 @@ import Welcome from "./Welcome";
 import Sum from "./Sum";
 import ClickCounter from "./ClickCounter ";
 import GithubUserList from "./GithubUserList";
+import CarDetails from "./CarDetails";
 
 export default class App extends Component {
   onLogin = (info) => {};
@@ -49,6 +50,13 @@ export default class App extends Component {
         <Sum numbers={[1, 2, 3, 4]} />
         <ClickCounter onCounterChange={this.onCounterChange} />
         <GithubUserList />
+        <CarDetails
+          initialData={{
+            model: "Toyota Corolla",
+            year: 2022,
+            color: "Ice Blue",
+          }}
+        />
       </div>
     );
   }
