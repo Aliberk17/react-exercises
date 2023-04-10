@@ -11,7 +11,6 @@ import UncontrolledLogin from "./UncontrolledLogin ";
 import Welcome from "./Welcome";
 import Sum from "./Sum";
 import ClickCounter from "./ClickCounter ";
-import GithubUser from "./GithubUser";
 import GithubUserList from "./GithubUserList";
 
 export default class App extends Component {

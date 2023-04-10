@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import useCounter from "./userCounter";
 
 function ClickCounter(props) {
-  const [count, setCount] = useState(0);
+  const [count, increment, decrement, reset] = useCounter();
 
   useEffect(() => {
     props.onCounterChange(count);
@@ -10,7 +11,9 @@ function ClickCounter(props) {
   return (
     <div>
       <h1>{count}</h1>
-      <button onClick={() => setCount(count + 1)}>Increase</button>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+      <button onClick={reset}>Reset</button>
     </div>
   );
 }
