@@ -1,13 +1,7 @@
-import React, { useEffect, useState } from "react";
+import useGithubUser from "./useGithubUser";
 
 export default function GithubUser(props) {
-  const [response, setResponse] = useState("");
-
-  useEffect(() => {
-    fetch(`https:api.github.com/users/${props.username}`)
-      .then((e) => e.json())
-      .then((response) => setResponse(response));
-  }, []);
+  const [response] = useGithubUser(props.username);
 
   return (
     <div>
