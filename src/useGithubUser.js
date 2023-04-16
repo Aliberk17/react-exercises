@@ -6,15 +6,16 @@ export default function useGithubUser(username) {
   const [error, setError] = useState(null);
 
   const fetchGithubUser = () => {
-    fetch(`https:api.github.com/users/${username}`)
-      .then((e) => {
+    try{
+      fetch(`https:api.github.com/users/${username}`)
+      .then((response) => response.json())
+      .then((json) => {
         setLoading(false);
-        setError(e.json());
-      })
-      .then((response) => {
-        setLoading(false);
-        setResponse(response);
+        setResponse(json);
       });
+    } catch (e){
+      setError(e);
+    }
   };
 
   return [response, loading, error, fetchGithubUser];
