@@ -13,6 +13,7 @@ import Sum from "./Sum";
 import ClickCounter from "./ClickCounter ";
 import GithubUserList from "./GithubUserList";
 import CarDetails from "./CarDetails";
+import FilteredList from "./FilteredList";
 
 export default class App extends Component {
   onLogin = (info) => {};
@@ -56,6 +57,35 @@ export default class App extends Component {
             year: 2022,
             color: "Ice Blue",
           }}
+        />
+        <FilteredList
+          users={[
+            {
+              id: 1,
+              name: "Ali",
+              age: 15,
+            },
+            {
+              id: 2,
+              name: "Melih",
+              age: 28,
+            },
+            {
+              id: 3,
+              name: "Mehmet",
+              age: 16,
+            },
+            {
+              id: 4,
+              name: "Adrian",
+              age: 30,
+            },
+            {
+              id: 5,
+              name: "Dorianna",
+              age: 27,
+            },
+          ]}
         />
       </div>
     );
