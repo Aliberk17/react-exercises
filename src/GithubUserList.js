@@ -18,6 +18,7 @@ export default function GithubUserList() {
 
   return (
     <div>
+      <p>Add a user and select it</p>
       <ul>
         {usernameList.map((username) => (
           <li key={username}>

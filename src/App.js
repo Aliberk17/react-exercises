@@ -19,7 +19,7 @@ export default function App() {
         <Route path="/" element={<Welcome name={"Ali"} />}></Route>
         <Route path="/counter" element={<Counter />}></Route>
         <Route path="/users">
-          <Route index element={<GithubUserList />} />
+          <Route index element={<GithubUserList />} ></Route>
           <Route path=":username" element={<ShowGithubUser />}></Route>
         </Route>
         <Route path="*" element={<NotFound />}></Route>
